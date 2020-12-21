@@ -1,0 +1,11 @@
+uuid: e6a7cfc2-f7c9-4238-b574-00ae92043acd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.photo_album
+id: node.photo_album
+target_entity_type_id: node
+target_bundle: photo_album
+default_langcode: site_default
+language_alterable: false

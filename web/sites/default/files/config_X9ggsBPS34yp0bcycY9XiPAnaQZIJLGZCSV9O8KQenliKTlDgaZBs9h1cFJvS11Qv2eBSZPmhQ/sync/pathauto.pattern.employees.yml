@@ -1,0 +1,22 @@
+uuid: fe195b1f-7708-44a0-8243-16d16dfe095e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: employees
+label: Employees
+type: 'canonical_entities:node'
+pattern: 'employees/[node:title]'
+selection_criteria:
+  f1d6829a-2a89-40b0-a7f8-d5f7699a5502:
+    id: node_type
+    bundles:
+      employees: employees
+    negate: false
+    context_mapping:
+      node: node
+    uuid: f1d6829a-2a89-40b0-a7f8-d5f7699a5502
+selection_logic: and
+weight: -5
+relationships: {  }

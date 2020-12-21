@@ -1,0 +1,11 @@
+uuid: e74d071b-ff12-44a9-9a26-cefe5e521d0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.selling
+id: taxonomy_term.selling
+target_entity_type_id: taxonomy_term
+target_bundle: selling
+default_langcode: site_default
+language_alterable: false

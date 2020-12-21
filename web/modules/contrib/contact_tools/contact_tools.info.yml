@@ -1,0 +1,11 @@
+name: 'Contact Tools'
+description: 'Helpers for Contact module provides some extra blueprints for AJAX'
+core_version_requirement: ^8.7.7 || ^9
+type: module
+dependencies:
+  - drupal:contact
+
+# Information added by Drupal.org packaging script on 2020-05-20
+version: '8.x-1.1'
+project: 'contact_tools'
+datestamp: 1589964150

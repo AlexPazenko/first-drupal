@@ -1,0 +1,49 @@
+uuid: d595b7d5-7441-45d8-84cd-cc985c50c192
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.employees.body
+    - field.field.node.employees.field_date_of_birth
+    - field.field.node.employees.field_department
+    - field.field.node.employees.field_image
+    - field.field.node.employees.field_position
+    - image.style.medium
+    - node.type.employees
+  module:
+    - image
+    - text
+    - user
+id: node.employees.teaser
+targetEntityType: node
+bundle: employees
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 2
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_date_of_birth: true
+  field_department: true
+  field_position: true
+  langcode: true

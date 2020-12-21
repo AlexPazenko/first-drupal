@@ -1,0 +1,8 @@
+uuid: 53b43f68-0a0b-472c-977d-299627050e50
+langcode: en
+status: true
+dependencies: {  }
+name: 'number of rooms'
+vid: number_of_rooms
+description: ''
+weight: 0

@@ -1,0 +1,11 @@
+uuid: 86bd239e-232d-4214-b62c-64ca496c7053
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.number_of_rooms
+id: taxonomy_term.number_of_rooms
+target_entity_type_id: taxonomy_term
+target_bundle: number_of_rooms
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,15 @@
+uuid: f8b1fed6-7509-49de-8a07-24473b86a20b
+langcode: en
+status: true
+dependencies: {  }
+name: news_miniature
+label: 'News miniature (300x300)'
+effects:
+  5180b3da-70ed-4e66-bb14-47e09f8850ca:
+    uuid: 5180b3da-70ed-4e66-bb14-47e09f8850ca
+    id: image_scale
+    weight: 2
+    data:
+      width: 300
+      height: 300
+      upscale: false

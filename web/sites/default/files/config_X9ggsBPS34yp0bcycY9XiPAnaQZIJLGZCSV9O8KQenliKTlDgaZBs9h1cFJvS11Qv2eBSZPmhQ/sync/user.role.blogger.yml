@@ -1,0 +1,18 @@
+uuid: 373b96a0-ed1f-4cc0-bc59-1db0a700901a
+langcode: en
+status: true
+dependencies: {  }
+id: blogger
+label: Blogger
+weight: 3
+is_admin: null
+permissions:
+  - 'create blog_post content'
+  - 'create blogs content'
+  - 'delete own blog_post content'
+  - 'delete own blogs content'
+  - 'revert blog_post revisions'
+  - 'revert blogs revisions'
+  - 'use text format user_s_text_format'
+  - 'view blog_post revisions'
+  - 'view blogs revisions'

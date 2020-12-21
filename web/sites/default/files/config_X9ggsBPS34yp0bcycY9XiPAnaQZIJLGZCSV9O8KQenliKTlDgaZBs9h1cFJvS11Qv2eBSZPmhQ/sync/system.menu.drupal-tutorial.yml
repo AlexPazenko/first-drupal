@@ -1,0 +1,8 @@
+uuid: 35314d48-6164-4032-b28c-4f85fc275057
+langcode: en
+status: true
+dependencies: {  }
+id: drupal-tutorial
+label: 'Drupal tutorial'
+description: ''
+locked: false

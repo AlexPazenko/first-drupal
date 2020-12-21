@@ -1,0 +1,29 @@
+uuid: 432e073c-ef6e-4fb3-bde9-e7e93f05531c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_room_number
+    - node.type.announcement
+    - taxonomy.vocabulary.number_of_rooms
+id: node.announcement.field_room_number
+field_name: field_room_number
+entity_type: node
+bundle: announcement
+label: 'Room number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      number_of_rooms: number_of_rooms
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

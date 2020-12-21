@@ -1,0 +1,22 @@
+uuid: de55b385-04a5-402d-8711-9a282fd3fa77
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: photo_album
+label: 'Photo album'
+type: 'canonical_entities:node'
+pattern: 'photo-album/[node:title]'
+selection_criteria:
+  416be425-c180-4dfb-a431-0b470a152dc2:
+    id: node_type
+    bundles:
+      photo_album: photo_album
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 416be425-c180-4dfb-a431-0b470a152dc2
+selection_logic: and
+weight: -5
+relationships: {  }

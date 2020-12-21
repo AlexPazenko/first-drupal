@@ -1,0 +1,22 @@
+uuid: 5ba82848-f7a2-47fa-a653-02c055aab948
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.selling
+  module:
+    - text
+id: taxonomy_term.selling.default
+targetEntityType: taxonomy_term
+bundle: selling
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

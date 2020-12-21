@@ -1,0 +1,172 @@
+--- src/Service/TaxonomyViewsIntegratorManager.php
++++ src/Service/TaxonomyViewsIntegratorManager.php
+@@ -2,23 +2,23 @@
+ 
+ namespace Drupal\tvi\Service;
+ 
+-use Drupal\tvi\Service\TaxonomyViewsIntegratorManagerInterface;
++use Drupal\Core\Config\ConfigFactory;
+ use Drupal\Core\Entity\EntityTypeManagerInterface;
+ use Drupal\taxonomy\TermInterface;
+ use Drupal\views\Views;
+-use Drupal\Core\Config\ConfigFactory;
+-use Symfony\Component\DependencyInjection\ContainerAwareTrait;
+ use Symfony\Component\DependencyInjection\ContainerAwareInterface;
++use Symfony\Component\DependencyInjection\ContainerAwareTrait;
+ use Symfony\Component\HttpFoundation\RequestStack;
+ 
+ /**
+  * Default implementation of TaxonomyViewsIntegratorManagerInterface
+  *
+- * The manager will inspect the configuration of the passed TermInterface object
++ * The manager will inspect the configuration of the passed TermInterface
++ * object
+  * and determine which view will be injected as the page output.
+  *
+- * At a later point, it would be great to support adherence to the Views permission
+- * settings, there is an outstanding patch and issue for that.
++ * At a later point, it would be great to support adherence to the Views
++ * permission settings, there is an outstanding patch and issue for that.
+  */
+ class TaxonomyViewsIntegratorManager implements TaxonomyViewsIntegratorManagerInterface, ContainerAwareInterface {
+ 
+@@ -41,6 +41,7 @@ class TaxonomyViewsIntegratorManager implements TaxonomyViewsIntegratorManagerIn
+ 
+   /**
+    * TaxonomyViewsIntegratorManager constructor.
++   *
+    * @param \Drupal\Core\Config\ConfigFactory $config
+    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+    * @param \Symfony\Component\HttpFoundation\RequestStack $requestStack
+@@ -63,7 +64,9 @@ class TaxonomyViewsIntegratorManager implements TaxonomyViewsIntegratorManagerIn
+ 
+   /**
+    * Get the taxonomy view integrator settings for this term entity.
++   *
+    * @param \Drupal\taxonomy\TermInterface $taxonomy_term
++   *
+    * @return \Drupal\Core\Config\Config
+    */
+   public function getTermConfigSettings(TermInterface $taxonomy_term) {
+@@ -72,7 +75,9 @@ class TaxonomyViewsIntegratorManager implements TaxonomyViewsIntegratorManagerIn
+ 
+   /**
+    * Get the taxonomy view integrator settings for this terms vocabulary entity.
++   *
+    * @param \Drupal\taxonomy\TermInterface $taxonomy_term
++   *
+    * @return \Drupal\Core\Config\Config
+    */
+   public function getVocabularyConfigSettings(TermInterface $taxonomy_term) {
+@@ -81,6 +86,7 @@ class TaxonomyViewsIntegratorManager implements TaxonomyViewsIntegratorManagerIn
+ 
+   /**
+    * Get the default taxonomy view integrator settings.
++   *
+    * @return \Drupal\Core\Config\Config
+    */
+   public function getDefaultConfigSettings() {
+@@ -89,39 +95,61 @@ class TaxonomyViewsIntegratorManager implements TaxonomyViewsIntegratorManagerIn
+ 
+   /**
+    * Wrapper method for obtaining parents of a given taxonomy term.
++   *
+    * @param \Drupal\taxonomy\TermInterface $taxonomy_term
++   *
+    * @return array
+    */
+   public function getTermParents(TermInterface $taxonomy_term) {
+-    return $this->entityTypeManager->getStorage('taxonomy_term')->loadAllParents($taxonomy_term->id());
++    return $this->entityTypeManager->getStorage('taxonomy_term')
++      ->loadAllParents($taxonomy_term->id());
+   }
+ 
+   /**
+    * Return an array of arguments from the URI.
+-   * It is assumed tha URI will be taxonomy/term/{taxonomy_term}, so anything after that will be returned.
++   * It is assumed tha URI will be taxonomy/term/{taxonomy_term}, so anything
++   * after that will be returned.
++   *
+    * @return array
+    */
+   public function getRequestUriArguments() {
+-    return array_slice(explode('/',  $this->requestStack->getCurrentRequest()->getRequestUri()), 3);
++    return array_slice(explode('/', $this->requestStack->getCurrentRequest()
++      ->getRequestUri()), 3);
+   }
+ 
+   /**
+    * {@inheritdoc}
+    */
+   public function getTaxonomyTermView(TermInterface $taxonomy_term) {
++    $view_info = $this->getTaxonomyTermViewAndDisplayId($taxonomy_term);
++
+     $config = $this->getTermConfigSettings($taxonomy_term);
+-    $check_vocab = true;
+-    $check_global = true;
++    $view_arguments = [$taxonomy_term->id()];
++    // if the option to pass all args to views is enabled, pass them on
++    if ($config->get('pass_arguments')) {
++      $view_arguments += $this->getRequestUriArguments();
++    }
++
++    return Views::getView($view_info['view_id'])->executeDisplay($view_info['display_id'], $view_arguments);
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function getTaxonomyTermViewAndDisplayId(TermInterface $taxonomy_term) {
++    $config = $this->getTermConfigSettings($taxonomy_term);
++    $check_vocab = TRUE;
++    $check_global = TRUE;
+ 
+     // if we have no matches, we are going to call the default term view that ships with core Drupal
+     $view_name = 'taxonomy_term';
+     $view_id = 'page_1';
+-    $view_arguments = [$taxonomy_term->id()];
+ 
+     if ($config->get('enable_override')) {
+       $view_name = $config->get('view');
+       $view_id = $config->get('view_display');
+-    } else {
++    }
++    else {
+       // check parent terms for settings
+       // if parent is enabled and has 'children inherit settings' is checked off
+       foreach ($this->getTermParents($taxonomy_term) as $parent) {
+@@ -135,7 +163,7 @@ class TaxonomyViewsIntegratorManager implements TaxonomyViewsIntegratorManagerIn
+         if ($config->get('enable_override') && $config->get('inherit_settings')) {
+           $view_name = $config->get('view');
+           $view_id = $config->get('view_display');
+-          $check_vocab = false;
++          $check_vocab = FALSE;
+           break;
+         }
+       }
+@@ -147,7 +175,7 @@ class TaxonomyViewsIntegratorManager implements TaxonomyViewsIntegratorManagerIn
+         if ($config->get('enable_override') && $config->get('inherit_settings')) {
+           $view_name = $config->get('view');
+           $view_id = $config->get('view_display');
+-          $check_global = false;
++          $check_global = FALSE;
+         }
+       }
+ 
+@@ -162,11 +190,10 @@ class TaxonomyViewsIntegratorManager implements TaxonomyViewsIntegratorManagerIn
+       }
+     }
+ 
+-    // if the option to pass all args to views is enabled, pass them on
+-    if ($config->get('pass_arguments')) {
+-      $view_arguments += $this->getRequestUriArguments();
+-    }
+-
+-    return Views::getView($view_name)->executeDisplay($view_id, $view_arguments);
++    return [
++      'view_id' => $view_name,
++      'display_id' => $view_id,
++    ];
+   }
++
+ }

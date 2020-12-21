@@ -1,0 +1,6 @@
+uuid: f55d6708-9c07-433d-a3f9-7c3ec521f3e9
+langcode: en
+status: true
+dependencies: {  }
+id: sales-manager
+label: 'Sales Manager'

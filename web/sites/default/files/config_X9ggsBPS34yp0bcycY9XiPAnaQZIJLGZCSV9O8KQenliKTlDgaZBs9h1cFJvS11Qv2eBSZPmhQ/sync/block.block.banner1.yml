@@ -1,0 +1,25 @@
+uuid: b288c0d6-0c5c-4df0-ac3c-dbdffb9dcbfb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:banner:88d71214-2270-4005-8fef-7c6becdd5e8b'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: banner1
+theme: bartik
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'block_content:88d71214-2270-4005-8fef-7c6becdd5e8b'
+settings:
+  id: 'block_content:88d71214-2270-4005-8fef-7c6becdd5e8b'
+  label: 'Banner 1'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

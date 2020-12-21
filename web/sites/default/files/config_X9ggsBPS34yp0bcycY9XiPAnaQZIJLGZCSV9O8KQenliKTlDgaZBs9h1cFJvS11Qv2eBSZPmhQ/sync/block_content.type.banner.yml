@@ -1,0 +1,8 @@
+uuid: 448e6621-544c-4327-b5e4-607d28e257fe
+langcode: en
+status: true
+dependencies: {  }
+id: banner
+label: Banner
+revision: 0
+description: 'Block for images, like a banner'

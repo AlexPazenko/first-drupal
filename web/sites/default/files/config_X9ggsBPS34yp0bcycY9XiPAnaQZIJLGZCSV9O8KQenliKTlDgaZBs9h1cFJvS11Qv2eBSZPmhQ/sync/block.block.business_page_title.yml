@@ -1,0 +1,20 @@
+uuid: 30c26944-3843-45d8-ba28-15dbffb02a60
+langcode: en
+status: false
+dependencies:
+  theme:
+    - business
+_core:
+  default_config_hash: Vb1hDStpFQ8tshKczE5O48B5uZaVxXBzeSMOS2ax0VI
+id: business_page_title
+theme: business
+region: header
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

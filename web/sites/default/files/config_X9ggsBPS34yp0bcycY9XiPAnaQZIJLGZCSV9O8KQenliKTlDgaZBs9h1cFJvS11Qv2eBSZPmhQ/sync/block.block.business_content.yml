@@ -1,0 +1,22 @@
+uuid: a6355c79-56a9-419a-b66a-c6286bf3f2ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - business
+_core:
+  default_config_hash: d2gU9L262pIeNdqJoH351gQruu-s201QEBJAKGsRfD8
+id: business_content
+theme: business
+region: content
+weight: 1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

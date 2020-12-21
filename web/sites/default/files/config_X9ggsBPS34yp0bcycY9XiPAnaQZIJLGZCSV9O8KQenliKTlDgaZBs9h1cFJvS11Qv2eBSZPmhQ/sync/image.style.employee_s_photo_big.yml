@@ -1,0 +1,15 @@
+uuid: 0175f716-6ba0-4a7a-9328-4e60e0ce3c38
+langcode: en
+status: true
+dependencies: {  }
+name: employee_s_photo_big
+label: 'Employee`s photo big(300x300)'
+effects:
+  968a9d6f-3c56-4083-aa1a-959c73b6c0f8:
+    uuid: 968a9d6f-3c56-4083-aa1a-959c73b6c0f8
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      upscale: false

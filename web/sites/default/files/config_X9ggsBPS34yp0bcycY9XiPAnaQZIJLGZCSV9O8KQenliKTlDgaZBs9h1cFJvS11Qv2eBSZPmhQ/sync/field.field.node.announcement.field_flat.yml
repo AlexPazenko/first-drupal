@@ -1,0 +1,29 @@
+uuid: bf23ccde-26c0-4004-a746-b749315c4e07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_flat
+    - node.type.announcement
+    - taxonomy.vocabulary.selling
+id: node.announcement.field_flat
+field_name: field_flat
+entity_type: node
+bundle: announcement
+label: Flat
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      selling: selling
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

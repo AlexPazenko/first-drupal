@@ -1,0 +1,22 @@
+uuid: 2d88b3cf-3e51-49e0-be9a-2d413ca4030a
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - business_responsive_theme
+_core:
+  default_config_hash: b7-G4ao41oTE03dP9OtMRi2HYSQiMj22CGIzgGLOOJA
+id: business_responsive_theme_help
+theme: business_responsive_theme
+region: highlighted
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }
