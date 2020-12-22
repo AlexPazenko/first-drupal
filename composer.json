@@ -47,6 +47,7 @@
         "drupal/paragraphs": "^1.12",
         "drupal/pathauto": "^1.8",
         "drupal/photoswipe": "^2.9",
+        "drupal/quicktabs": "^3.0@alpha",
         "drupal/redirect": "^1.6",
         "drupal/robotstxt": "^1.4",
         "drupal/scheduler": "^1.3",
@@ -55,6 +56,8 @@
         "drupal/swiftmailer": "^2.0@beta",
         "drupal/tvi": "^1.0@RC",
         "drupal/twig_tweak": "^2.8",
+        "drupal/views_slideshow": "^4.8",
+        "drupal/webform": "^5.22",
         "drupal/youtube": "^1.2",
         "oomphinc/composer-installers-extender": "^2.0"
     },

@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '3656ebeaee52d192f8756e597d9e95b6462dfaa7',
     'name' => 'drupal/recommended-project',
   ),
   'versions' => 
@@ -903,6 +903,15 @@
       ),
       'reference' => '8.x-1.4',
     ),
+    'drupal/jquery_ui_accordion' => 
+    array (
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.1',
+    ),
     'drupal/jquery_ui_draggable' => 
     array (
       'pretty_version' => '1.2.0',
@@ -920,6 +929,15 @@
       array (
       ),
       'reference' => '8.x-1.2',
+    ),
+    'drupal/jquery_ui_tabs' => 
+    array (
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.1',
     ),
     'drupal/jsonapi' => 
     array (
@@ -1158,6 +1176,15 @@
         0 => '8.9.11',
       ),
     ),
+    'drupal/quicktabs' => 
+    array (
+      'pretty_version' => '3.0.0-alpha4',
+      'version' => '3.0.0.0-alpha4',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-3.0-alpha4',
+    ),
     'drupal/rdf' => 
     array (
       'replaced' => 
@@ -1167,12 +1194,12 @@
     ),
     'drupal/recommended-project' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '3656ebeaee52d192f8756e597d9e95b6462dfaa7',
     ),
     'drupal/redirect' => 
     array (
@@ -1418,12 +1445,30 @@
         0 => '8.9.11',
       ),
     ),
+    'drupal/views_slideshow' => 
+    array (
+      'pretty_version' => '4.8.0',
+      'version' => '4.8.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-4.8',
+    ),
     'drupal/views_ui' => 
     array (
       'replaced' => 
       array (
         0 => '8.9.11',
       ),
+    ),
+    'drupal/webform' => 
+    array (
+      'pretty_version' => '5.22.0',
+      'version' => '5.22.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-5.22',
     ),
     'drupal/workflows' => 
     array (
