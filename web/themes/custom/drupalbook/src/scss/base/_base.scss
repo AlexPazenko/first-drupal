@@ -1,0 +1,242 @@
+html, body, .site{
+  margin: 0;
+
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $site-backgraund;
+  font-family: $ProbaPro;
+  font-weight: 400;
+}
+.site-content {
+  background-color: $midtone-bg;
+}
+.avatar-61 {
+  border-radius: 0;
+  float: left;
+}
+.wrap{
+  min-height: 100%;
+}
+.title-cat-post {
+  font: 700 22px/28px 'FiraSansCondensed-regular';
+}
+.content-cat-post {
+  margin-bottom: 25px;
+  font: 400 14px/19px 'Scada-regular';
+}
+.w-100{
+  width: 100%;
+}
+.white-blocks-decor {
+  border-radius: 4px;
+  background-color: $light-bg;
+}
+.light {
+  &-text {
+    color: $light-text;
+  }
+  &-bg {
+    background-color: $light-bg;
+  }
+}
+.midtone {
+  &-text {
+    color: $midtone-text;
+  }
+  &-bg {
+    background-color: $midtone-bg;
+  }
+}
+.dark {
+  &-text {
+    color: $dark-text;
+  }
+  &-bg {
+    background-color: $header-bg;
+  }
+}
+.color {
+  &-text {
+    color: $color-text;
+  }
+}
+.bg {
+  &-white {
+    background-color: #fff;
+  }
+}
+.title-decor {
+  font-family: $ProbaProBold;
+  color: $dark-text;
+  position: relative;
+  font-size: 20px;
+  line-height: 22px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: -3px;
+}
+.more-link-style {
+  color: $dark-text;
+  font: 15px $ProbaProBold;
+  line-height: 16px;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.more-link-style:hover {
+  color: $link-hover;
+  text-decoration: underline;
+}
+
+.f-size {
+  &-14px {
+    font-size: 14px;
+  }
+}
+.margin-b {
+  &-60 {
+    margin-bottom: 60px;
+  }
+  &-40 {
+    margin-bottom: 40px;
+  }
+  &-20 {
+    margin-bottom: 20px;
+  }
+  &-10 {
+    margin-bottom: 10px;
+  }
+}
+.padding-l {
+  &-18 {
+    padding-left: 18px;
+  }
+}
+.padding-b {
+  &-20 {
+    padding-bottom: 20px;
+  }
+  &-5 {
+    padding-bottom: 5px;
+  }
+}
+.padding-top {
+    padding-top: 30px;
+  }
+.no-margin {
+  margin: 0;
+}
+.no-padding {
+  padding: 0;
+}
+.no-padding-right {
+  padding-right: 0;
+}
+.no-padding-left {
+  padding-left: 0;
+}
+.text-center {
+  text-align: center;
+}
+
+.padding-page-decor {
+  padding: 15px 0 15px 10px;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.chat-comment {
+  background: url(/wp-content/themes/vikka/img/chat_bubble_icon.svg) 50% no-repeat;
+  width: 11px;
+  height: 11px;
+  margin-bottom: -1px;
+}
+.clock-o {
+  background: url(/wp-content/themes/vikka/img/clock_icon.svg) 50% no-repeat;
+  width: 11px;
+  height: 11px;
+  margin-bottom: -2px;
+}
+.cross-search {
+  background: url(/wp-content/themes/vikka/img/cross_icon.svg) 50% no-repeat;
+  width: 9px;
+  height: 9px;
+}
+.calendar-icon {
+  background: url(/wp-content/themes/vikka/img/calendar-icon.png) 50% no-repeat;
+  width: 17px;
+  height: 16px;
+  display: block;
+  margin-bottom: -3px;
+}
+.hot-news {
+  background: url(/wp-content/themes/vikka/img/hot_news.png) 50% no-repeat;
+  width: 16px;
+  height: 19px;
+  display: block;
+  margin-right: 1px;
+}
+
+.hidden-arrow-up {
+  background: url(/wp-content/themes/ck-oda/img/hidden-arrow-up.png) 50% no-repeat;
+  width: 20px;
+  height: 21px;
+  margin-top: 13px;
+}
+.margin-none {
+  margin: 0;
+}
+.background-color {
+  background-color: $background-color;
+}
+.flex-align-right {
+  justify-content: flex-end;
+}
+.title-cat-post a {
+  color: $dark-text;
+  &:hover {
+    color: $link-hover;
+  }
+}
+body.home {
+  background-position:center;
+  background-attachment: fixed;
+}
+.block-padding-bottom {
+  padding-bottom: 45px;
+}
+.empty-block-height {
+  height: 47px;
+}
+.hidden {
+  display: none;
+}
+
+/* Styles for People with visual impairment block */
+.desaturated {
+  -moz-filter: grayscale(100%);
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+.special-version-controls {
+  display: none;
+}
+.custom-padding-both-sides {
+  @media (max-width: 1200px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.custom-padding-left-side {
+  @media (max-width: 1200px) {
+    padding-left: 15px;
+  }
+}
+.custom-padding-right-side {
+  @media (max-width: 1200px) {
+    padding-right: 15px;
+  }
+}

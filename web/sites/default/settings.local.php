@@ -106,7 +106,7 @@ $config['system.performance']['js']['preprocess'] = FALSE;
  * During development it can be useful to install test extensions for debugging
  * purposes.
  */
-# $settings['extension_discovery_scan_tests'] = TRUE;
+ $settings['extension_discovery_scan_tests'] = FALSE;
 
 /**
  * Enable access to rebuild.php.
