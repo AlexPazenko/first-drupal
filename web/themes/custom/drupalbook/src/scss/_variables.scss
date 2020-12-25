@@ -50,3 +50,18 @@ $ProbaProBoldItalic: 'ProbaPro-Bold-Italic', Arial, sans-serif;
 $Roboto: 'Roboto-Regular', Arial, sans-serif;
 $RobotoMedium: 'Roboto-Medium', Arial, sans-serif;
 $RobotoBold: 'Roboto-Bold', Arial, sans-serif;
+
+
+$sm: 540px;
+$md: 720px;
+$lg: 960px;
+$xl: 1140px;
+$screen-xs-max: $xl;
+$screen-sm-min: $sm;
+$screen-md-min: $md;
+$screen-lg-min: $lg;
+
+$mobile:  "screen and (max-width: #{$screen-xs-max})";
+$tablet:  "screen and (min-width: #{$screen-sm-min})";
+$normal:  "screen and (min-width: #{$screen-md-min})";
+$wide:    "screen and (min-width: #{$screen-lg-min})";

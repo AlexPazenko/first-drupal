@@ -10,8 +10,28 @@
 @import "./node_modules/bootstrap/scss/code";
 @import "./node_modules/bootstrap/scss/grid";
 
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 @import "variables";
 @import "mixins";
 
+//Components
+@import "component/header";
+
+//Blocks
+@import "blocks/search";
+
+//Pages
+@import "pages/frontpage";
+
 @import "layouts/home-page";
+@import "layouts/blocks";
+@import "layouts/pages";
+
+
+
+
+
+
+
