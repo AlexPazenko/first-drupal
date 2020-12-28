@@ -53,6 +53,8 @@ header.navbar {
   #navbar-collapse {
     @media #{$mobile} {
       background: rgba(0, 0, 0, 0.85);
+      overflow-y: hidden;
+      max-height: 100%;
     }
     #block-drupalbook-main-menu-menu ul {
       @media #{$mobile} {
