@@ -96,7 +96,7 @@
 
 {# Main #}
 {% block main %}
-  <div role="main" class="main-container {{ container }} js-quickedit-main-content">
+  <div role="main" class="main-container22 {{ container }} js-quickedit-main-content">
     <div class="row">
 
       {# Header #}
@@ -142,6 +142,16 @@
           {% endblock %}
         {% endif %}
 
+
+
+        {% if page.featured_top %}
+          <div class="featured-top">
+            <aside class="featured-top__inner section layout-container clearfix" role="complementary">
+              {{ page.featured_top }}
+            </aside>
+          </div>
+        {% endif %}
+
         {# Content #}
         {% block content %}
           <a id="main-content"></a>
@@ -157,7 +167,7 @@
           </aside>
         {% endblock %}
       {% endif %}
-    </div>
+    </div>main-content
   </div>
 {% endblock %}
 
