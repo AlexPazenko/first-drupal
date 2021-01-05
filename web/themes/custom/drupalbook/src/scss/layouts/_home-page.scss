@@ -2,6 +2,9 @@
 body {
   background-color: #ddd;
 }
-.ttt {
-display: inline-block;
+.main-container {
+  .hero-custom-style {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

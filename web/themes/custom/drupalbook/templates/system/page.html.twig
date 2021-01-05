@@ -96,13 +96,13 @@
 
 {# Main #}
 {% block main %}
-  <div role="main" class="main-container22 {{ container }} js-quickedit-main-content">
+  <div role="main" class="main-container {{ container }} js-quickedit-main-content">
     <div class="row">
 
       {# Header #}
       {% if page.header %}
         {% block header %}
-          <div class="col-sm-12" role="heading">
+          <div class="col-sm-12 hero-custom-style" role="heading">
             {{ page.header }}
           </div>
         {% endblock %}

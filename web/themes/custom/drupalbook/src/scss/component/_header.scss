@@ -1,7 +1,7 @@
 header.navbar {
   height: 150px;
   .container-fluid {
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.5);
   }
   #block-logo {
     line-height: 150px;
@@ -62,4 +62,12 @@ header.navbar {
       }
     }
   }
+}
+
+.navbar-fixed-top {
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+}
+body.navbar-is-fixed-top {
+  margin: 0;
 }
