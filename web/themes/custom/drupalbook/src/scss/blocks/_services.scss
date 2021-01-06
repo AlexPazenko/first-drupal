@@ -1,0 +1,30 @@
+#block-services {
+  background-color: #4bcaff;
+  color: #ffffff;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  .block-title {
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 40px;
+    &:after{
+      content: '';
+      width: 45px;
+      height: 2px;
+      background-color: #ffffff;
+      display: block;
+      margin-top: 5px;
+    }
+  }
+  .field--name-field-services-title {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .field--name-field-services-description {
+    font-size: 12px;
+  }
+}

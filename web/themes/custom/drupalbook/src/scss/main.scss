@@ -18,10 +18,14 @@
 
 //Components
 @import "component/header";
+@import "component/main_styles";
 
 //Blocks
-@import "blocks/search";
+
 @import "blocks/background_frontpage";
+@import "blocks/search";
+@import "blocks/services";
+
 
 //Pages
 @import "pages/frontpage";

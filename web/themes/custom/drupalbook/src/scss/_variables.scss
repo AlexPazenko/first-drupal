@@ -52,6 +52,9 @@ $RobotoMedium: 'Roboto-Medium', Arial, sans-serif;
 $RobotoBold: 'Roboto-Bold', Arial, sans-serif;
 
 
+$col-sm: 768px;
+
+$md: 720px;
 $sm: 540px;
 $md: 720px;
 $lg: 960px;
@@ -65,3 +68,5 @@ $mobile:  "screen and (max-width: #{$screen-xs-max})";
 $tablet:  "screen and (min-width: #{$screen-sm-min})";
 $normal:  "screen and (min-width: #{$screen-md-min})";
 $wide:    "screen and (min-width: #{$screen-lg-min})";
+
+$max-mobile: "screen and (max-width: #{$col-sm})";
